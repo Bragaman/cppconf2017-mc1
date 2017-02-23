@@ -1,1 +1,2 @@
-# cppconf2017-mc1
+# C++Conf 2017 Master Class CI
+
