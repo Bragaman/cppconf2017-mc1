@@ -2,7 +2,7 @@ dist: trusty
 language: cpp
 script:
   - mkdir build && cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_COMPILER=$COMPILER
+  - CXX=$COMPILER cmake .. -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
   - cmake --build .
   - ./mc_01
 
@@ -21,14 +21,14 @@ env:
 
 addons:
   apt:
-  sources:
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-trusty-3.9
-  packages:
-    - g++-4.9
-    - g++-5
-    - g++-6
-    - clang-3.9
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty-3.9
+    packages:
+      - g++-4.9
+      - g++-5
+      - g++-6
+      - clang-3.9
 
 #    - clang-4.0
 #    - llvm-toolchain-trusty-4.0
