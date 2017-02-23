@@ -1,8 +1,17 @@
 dist: trusty
 language: cpp
 script:
-    - mkdir build && cd build
-    - cmake ..
-    - cmake --build .
-    - ./mc_01
+  - mkdir build && cd build
+  - CXX=g++-6 CC=gcc-6 cmake ..
+  - cmake --build .
+  - ./mc_01
 
+env:
+  - COMPILER=g++-6
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-6
