@@ -9,10 +9,12 @@ include_directories(.)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(src/hello)
-enable_testing()
-add_subdirectory(test)
 
-set(SOURCE_FILES src/main.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME} hello ${CONAN_LIBS})
+#enable_testing()
+#add_subdirectory(test_package)
+
+#set(SOURCE_FILES src/main.cpp)
+
+#add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+#target_link_libraries(${PROJECT_NAME} hello ${CONAN_LIBS})

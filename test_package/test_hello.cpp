@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include <include/hello/hello.h>
+#include <hello/hello.h>
 
 TEST(hello, hello) {
     std::stringstream ss;
