@@ -2,7 +2,7 @@ dist: trusty
 language: cpp
 script:
   - mkdir build && cd build
-  - cmake .. -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
+  - CXX=$COMPILER cmake .. -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
   - cmake --build .
   - ./mc_01
 
